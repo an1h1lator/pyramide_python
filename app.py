@@ -5,7 +5,8 @@ if __name__ == '__main__':
     with Configurator() as config:
         config.scan('views')
         config.add_route('home', '/')
-        config.add_route('hello', '/howdy')
+        #config.add_route('hello', '/howdy')
+        config.add_route('hello', '/howdy/{first}/{last}')
         config.add_route('redirect', '/goto')
         config.add_route('exception', '/problem')
         app = config.make_wsgi_app()
